@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Threading;
 using ScottPlot;
 
+
 namespace cli_life
 {
     public class SimulationSettings
