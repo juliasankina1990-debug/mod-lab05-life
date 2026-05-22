@@ -76,18 +76,16 @@ namespace Life.Tests
             Assert.AreEqual(3, board.CountAlive());
         }
 
-
-		[TestMethod]
-		public void Test_ClassifyComponent_IdentifiesBeehive()
-		{
-		    var board = new Board(10, 10, 1, randomize: false);
-		    string[] beehive = { "0110", "1001", "0110" };
-		    board.PlaceFigure(3, 3, beehive);
-		    var components = Program.GetConnectedComponents(board);
-		    var classification = Program.ClassifyComponent(components[0], board);
-		    Assert.AreEqual("Beehive", classification);
-		}
-
+        [TestMethod]
+        public void Test_ClassifyComponent_IdentifiesBeehive()
+        {
+            var board = new Board(10, 10, 1, randomize: false);
+            string[] beehive = { "0110", "1001", "0110" };
+            board.PlaceFigure(3, 3, beehive);
+            var components = Program.GetConnectedComponents(board);
+            var classification = Program.ClassifyComponent(components[0], board);
+            Assert.AreEqual("Beehive", classification);
+        }
 
         [TestMethod]
         public void Test_Glider_Moves()

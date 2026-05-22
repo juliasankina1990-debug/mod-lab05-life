@@ -6,7 +6,6 @@ using System.Text.Json;
 using System.Threading;
 using ScottPlot;
 
-
 namespace cli_life
 {
     public class SimulationSettings
@@ -242,7 +241,7 @@ namespace cli_life
             int minX = cells.Min(c => c.x);
             int minY = cells.Min(c => c.y);
             var normalized = cells.Select(c => (c.x - minX, c.y - minY)).OrderBy(c => c.Item1).ThenBy(c => c.Item2).ToList();
-        
+
             foreach (var pattern in _patterns)
             {
                 if (normalized.Count != pattern.Value.Count) continue;
